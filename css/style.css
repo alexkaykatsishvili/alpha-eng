@@ -75,7 +75,7 @@ a:hover {
 .container .wrapper {
     max-width: 1075px;
     margin: 0 auto;
-    padding: 75px 25px 0;
+    padding: 25px 25px 0;
 }
 
 .container .wrapper .header__logo svg {
@@ -188,7 +188,7 @@ a:hover {
     align-items: center;
     position: absolute;
     transform: translateY(-50%);
-    top: 54%;
+    top: 51%;
 }
 
 .container .wrapper .main__info p {
@@ -197,6 +197,11 @@ a:hover {
     font-size: 18px;
     font-weight: 100;
     text-align: center;
+}
+
+.container .wrapper .main__info p.error {
+    font-size: 12px;
+    margin: 0;
 }
 
 .container .wrapper .main .main__button {
@@ -249,10 +254,18 @@ a:hover {
     border-color: #5ec5f4;
 }
 
+.container .wrapper .main__form input.has-error,
+.container .wrapper .main__form textarea.has-error {
+    border-color: red;
+}
+
 .container .wrapper .main__form textarea {
-    height: 120px;
     resize: none;
     padding: 20px;
+}
+
+.container .wrapper .main__form textarea::-webkit-scrollbar {
+    display: none;
 }
 
 .container .wrapper .main__form [type="submit"] {
@@ -328,7 +341,6 @@ a:hover {
 }
 
 .footer__bottom {
-    margin-top: 8px;
     background-color: #000b1c;
     width: 100vw;
     height: 56px;

@@ -1,0 +1,8 @@
+{
+    "name": "it20/rsoing",
+    "type": "project",
+    "require": {
+        "swiftmailer/swiftmailer": "^6.0",
+        "true/punycode": "^2.1"
+    }
+}
