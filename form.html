@@ -9,6 +9,32 @@
     <link rel="stylesheet" href="css/style.css">
     <link rel="shortcut icon" type="image/png" href="img/favicon.ico">
     <title>Alpha Engeneering | Оставить заявку</title>
+    <style>
+    #pop-up-message-container {
+        position: fixed;
+        width: 300px;
+        z-index: 10001;
+        left: 50%;
+        top: 50%;
+        transform: translateX(-50%) translateY(-50%);
+        background: rgba(0, 9, 28, .9);
+        text-align: center;
+        border-radius: 25px;
+        font-size: 14px;
+    }
+
+    #pop-up-message-container a {
+        position: absolute;
+        right: 18px;
+        top: 8px;
+        font-size: 17px;
+    }
+
+    #pop-up-message-container span {
+        padding: 40px;
+        display: block;
+    }
+    </style>
 </head>
 
 <body>
@@ -214,11 +240,11 @@
                     <main class="main">
                         <div class="main__info flex">
                             <p>Оставьте Вашу заявку в форме ниже</p>
-                            <form class="main__form" action="" method="get">
-                                <input name="name" type="text" placeholder="Имя">
-                                <input name="e-mail" type="email" placeholder="E-mail">
-                                <input name="phone" type="tel" placeholder="Телефон">
-                                <textarea name="message" placeholder="Сообщение" cols="60" rows="10"></textarea>
+                            <form id="main__form" class="main__form" action="feedback.php" method="post">
+                                <input name="name" type="text" placeholder="Имя" required>
+                                <input name="e-mail" type="email" placeholder="E-mail" required>
+                                <input name="phone" type="tel" id="phone" placeholder="Телефон" required>
+                                <textarea name="message" placeholder="Сообщение" cols="60" rows="10" required></textarea>
                                 <input type="submit">
                             </form>
                         </div>
@@ -250,8 +276,12 @@
             </div>
         </div>
     </div>
+    <div id="pop-up-message-container"></div>
     <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
     <script src="js/script.js"></script>
+    <script src="js/inputmask/min/jquery.inputmask.bundle.min.js"></script>
+    <script src="js/form-validator.js"></script>
+    <script src="js/form-script.js"></script>
 </body>
 
 </html>
